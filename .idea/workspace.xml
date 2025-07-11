@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="177763ac-a224-4d60-8096-0d1b52b7ee83" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/a-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/multidimentional_regression-checkpoint.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Housing.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_house_prediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/linear_regression_from_scratch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/linear_regression_from_scratch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multidimentional_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/multidimentional_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_2d_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_2d_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_house_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_house_prediction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
