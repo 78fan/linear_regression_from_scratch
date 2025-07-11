@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="177763ac-a224-4d60-8096-0d1b52b7ee83" name="Changes" comment="results improved by 2 times with proper encoding of non numerical data and adding polynomial terms">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multidimentional_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/multidimentional_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_house_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_house_prediction.py" afterDir="false" />
-    </list>
+    <list default="true" id="177763ac-a224-4d60-8096-0d1b52b7ee83" name="Changes" comment="L1 regularisation added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752217216041</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="L1 regularisation added">
+      <option name="closed" value="true" />
+      <created>1752219687320</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752219687320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +120,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="results improved by 2 times with proper encoding of non numerical data" />
     <MESSAGE value="results improved by 2 times with proper encoding of non numerical data and adding polynomial terms" />
-    <option name="LAST_COMMIT_MESSAGE" value="results improved by 2 times with proper encoding of non numerical data and adding polynomial terms" />
+    <MESSAGE value="L1 regularisation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="L1 regularisation added" />
   </component>
 </project>

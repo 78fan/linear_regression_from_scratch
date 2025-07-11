@@ -21,7 +21,7 @@ for column in data.columns:
 
 features = data.loc[:, data.columns != 'price'].to_numpy()
 
-weights = linear_regression(features, labels, 0.1, 100000, 0.0001)
+weights = linear_regression(features, labels, 0.1, 100000, 0.0001, 1)
 print(data.columns)
 print(weights)
 comparison = pd.DataFrame({"Expected":labels, "Predicted":predict(weights, features).astype(int)})
