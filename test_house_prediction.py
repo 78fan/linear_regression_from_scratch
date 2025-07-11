@@ -15,13 +15,15 @@ for col in data.select_dtypes(exclude=['number']).columns:
     data = one_hot_encode(data, col)
 
 for column in data.columns:
-    for i in [2]:
+    for i in [2, 3]:
         data[f'{column}{i}'] = data[column]**i
 
 
 features = data.loc[:, data.columns != 'price'].to_numpy()
 
-weights = linear_regression(features, labels, 0.05, 100000)
+weights = linear_regression(features, labels, 0.1, 100000, 0.0001)
+print(data.columns)
+print(weights)
 comparison = pd.DataFrame({"Expected":labels, "Predicted":predict(weights, features).astype(int)})
 comparison["Miss"] = abs(comparison["Expected"] - comparison["Predicted"])
 print(comparison)

@@ -37,12 +37,13 @@ def squared_error(weights: np.ndarray, features: np.ndarray, labels: np.ndarray)
     diff = labels - predict(weights, features)
     return np.mean(diff**2)
 
-def gradient_descent(weights: np.ndarray, features: np.ndarray, labels: np.ndarray, step: float):
-    gradient = -2/len(labels) * (features.T @ (labels - predict(weights, features)))
+def gradient_descent(weights: np.ndarray, features: np.ndarray, labels: np.ndarray, step: float, lambd: int):
+    l1_gradient = np.where(weights > 0, 1, -1)
+    gradient = -2/len(labels) * (features.T @ (labels - predict(weights, features))) + lambd*l1_gradient
     weights -= step*gradient
 
 
-def linear_regression(features: np.ndarray, labels: np.ndarray, step: float, steps: int) -> np.ndarray:
+def linear_regression(features: np.ndarray, labels: np.ndarray, step: float, steps: int, lambd: int) -> np.ndarray:
     weights = np.random.uniform(-1, 1, size = features.shape[1])
     features_mean = features.mean(axis=0)
     features_std = np.where(features.std(axis=0) == 0, 1, features.std(axis=0))
@@ -51,7 +52,7 @@ def linear_regression(features: np.ndarray, labels: np.ndarray, step: float, ste
     features = (features - features_mean) / features_std
     labels = (labels - labels_mean) / labels_std
     for s in range(steps):
-        gradient_descent(weights, features, labels, step)
+        gradient_descent(weights, features, labels, step, lambd)
         if s%1000 == 0:
             print(squared_error(weights, features, labels))
     feature_weights = weights[:-1].copy()
