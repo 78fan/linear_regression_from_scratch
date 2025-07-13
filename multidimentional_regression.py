@@ -26,7 +26,7 @@ test_prices = np.array([325000, 485000, 375000, 195000, 585000,
                345000, 495000, 225000, 615000, 295000,
                505000, 335000, 365000, 455000, 255000])
 
-test_features = np.column_stack([test_squares, test_years, test_bathrooms, np.ones(test_squares.shape)])
+test_features = np.column_stack([test_squares, test_years, test_bathrooms])
 
 
 
@@ -43,24 +43,28 @@ def gradient_descent(weights: np.ndarray, features: np.ndarray, labels: np.ndarr
     gradient = -2/len(labels) * (features.T @ (labels - predict(weights, features))) + lambd*k*l1_gradient + lambd*(1-k)*l2_gradient
     weights -= step*gradient
 
+def add_bias(features: np.ndarray) -> np.ndarray:
+    return np.column_stack([features, np.ones(features.shape[0])])
 
 def linear_regression(features: np.ndarray, labels: np.ndarray, step: float, steps: int, lambd: int = 0, k: int = 1) -> np.ndarray:
-    weights = np.random.uniform(-1, 1, size = features.shape[1])
+    weights = np.random.uniform(-1, 1, size = features.shape[1]+1)
     features_mean = features.mean(axis=0)
     features_std = np.where(features.std(axis=0) == 0, 1, features.std(axis=0))
     labels_mean = labels.mean()
     labels_std = labels.std() if labels.std() != 0 else 1
     features = (features - features_mean) / features_std
+    features = add_bias(features)
     labels = (labels - labels_mean) / labels_std
     for s in range(steps):
         gradient_descent(weights, features, labels, step, lambd, k)
         if s%1000 == 0:
             print(squared_error(weights, features, labels))
     feature_weights = weights[:-1].copy()
-    weights[:-1] = weights[:-1]*(labels_std/features_std[:-1])
-    weights[-1] = labels_mean + labels_std * (weights[-1] - np.sum(feature_weights / features_std[:-1]))
+    weights[:-1] = weights[:-1]*(labels_std/features_std)
+    weights[-1] = labels_mean - np.dot(weights[:-1], features_mean)
     return weights
 
 if __name__ == '__main__':
-    result = linear_regression(test_features, test_prices, 0.001, 10000)
-    print(predict(result, test_features))
+    result = linear_regression(test_features, test_prices, 0.01, 100000)
+    print(result)
+    print(predict(result, add_bias(test_features)))

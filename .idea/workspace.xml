@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="177763ac-a224-4d60-8096-0d1b52b7ee83" name="Changes" comment="L1 regularisation added" />
+    <list default="true" id="177763ac-a224-4d60-8096-0d1b52b7ee83" name="Changes" comment="L2 regularisation added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multidimentional_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/multidimentional_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_house_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_house_prediction.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,15 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.multidimentional_regression.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_house_prediction.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vlad/PycharmProjects/ds/linear_regression_from_scratch&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.multidimentional_regression.executor": "Run",
+    "Python.simple_2d_regression.executor": "Run",
+    "Python.test_house_prediction.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Vlad/PycharmProjects/ds/linear_regression_from_scratch"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -90,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752219687320</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="L2 regularisation added">
+      <option name="closed" value="true" />
+      <created>1752220812188</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752220812188</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +134,7 @@
     <MESSAGE value="results improved by 2 times with proper encoding of non numerical data" />
     <MESSAGE value="results improved by 2 times with proper encoding of non numerical data and adding polynomial terms" />
     <MESSAGE value="L1 regularisation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="L1 regularisation added" />
+    <MESSAGE value="L2 regularisation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="L2 regularisation added" />
   </component>
 </project>
